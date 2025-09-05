@@ -14,7 +14,7 @@
 </head>
 <body>
     <div class="div border w-75 m-auto mb-5 overflow-visible mt-5">
-       <span class="span main_color border text-white float-end width main_text translate-middle-y me-5"> اسئلة مكررة؟ <span><i class="fa-solid fa-circle-question"></i></span></span>
+       <span class="span main_color border text-white float-end width main_text translate-middle-y me-5"> <span><i class="fa-solid fa-circle-question"></i></span> اسئلة مكررة؟ </span>
         <div class="part w-80">
             <button class="w-100 main_text button_color border mt-3 m-auto"  onclick="toggle(this)" data-target="demo">ازاى احجز موعد فى نفس اليوم مع دكتور؟</button>        
         <p class="main_text mb-3" id="demo" style="display:none;">تستطيع أن تدخل على موقع أو تطبيق فيزيتا وتبحث عن دكاترة في منطقتك، اختار 'اليوم' من المواعيد المتاحة في محدد البحث اعلى الصفحة واحجز في أقل من دقيقة.</p>
@@ -38,7 +38,7 @@
     </div>
    
      <div class="div border w-75 m-auto ">
-       <span class="span main_color border text-white float-end width main_text translate-middle-y me-5"> اعرف اكتر عن صحتك<span><i class="fa-solid fa-circle-question"></i></span></span>
+       <span class="span main_color border text-white float-end width main_text translate-middle-y me-5"> <span><i class="fa-solid fa-circle-question"></i></span> اعرف اكتر عن صحتك</span>
         <div class="part w-80">
             <button class="w-100 main_text button_color border mt-3 mb-1"  onclick="toggle(this)" data-target="demo5">ايه هو تخصص الطبيب العام؟</button>        
         <p class="main_text mb-3" id="demo5" style="display:none;">الطبيب العام بيشخص ويعالج المشاكل الصحية الجسدية والنفسية العامة، وبيحول المرضى لـلعلاج العاجل والمتخصص.</p>
@@ -65,7 +65,7 @@
 
         </div>
           <div class="part w-80">
-            <button class="w-100 main_text button_color border mt-3 mb-1"  onclick="toggle(this)" data-target="demo8">؟ B ايه اعراض نقص فيتامين</button>
+            <button class="w-100 main_text button_color border mt-3 mb-1"  onclick="toggle(this)" data-target="demo8"> ايه اعراض نقص فيتامين B؟</button>
              <p class="main_text mb-3" id="demo8" style="display:none;">من بين الأعراض الشائعة لنقص فيتامين    <BR>
  
 فقدان الشهية وفقدان الوزن<BR>
@@ -142,6 +142,7 @@ function toggle(button) {
 <script >src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"</script>
     
 </body>
+
 
 
 
