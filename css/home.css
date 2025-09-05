@@ -1,0 +1,215 @@
+/*stat css home page*/
+.home{
+    background-color: #eef0f2;
+}
+.contain{
+    width: 1206px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.start{
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.01) 38%, transparent 100%);
+    background-image:url(../photos/doctors.jpg);
+    height:863px;
+}
+.top-gradient {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.01) 20%, transparent 100%);
+    pointer-events: none;
+
+}
+.start .container h1{
+    margin: 0px 0px 22px;
+    font-size: 33px;
+    font-weight: 500;
+    color: #6f7072;
+    padding-top: 50px;
+}
+.start .container span{
+    font-size: 24px;
+    font-weight: 500;
+    color: #6f7072;
+}
+
+/*start search item*/
+.search-bar {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    width: 90%;
+    margin: 20px auto;
+    text-align: right;
+    direction: rtl;
+    margin-top: 400px;
+
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.tab {
+    background: none;
+    border: none;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.tab.active {
+    border-bottom: 2px solid #007bff;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.tab-content {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+select, input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    flex: 1;
+    width:23%;
+}
+
+.search-btn {
+    background: red;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/*end search item*/
+/* start shamel bar*/
+.contain .bar{
+    background: url(../photos/bar.jpg) center center / cover no-repeat rgb(0, 112, 205);
+    height:100px;
+    border-radius: 10px;
+    margin-top: 85px;
+    display: flex;
+    justify-content: space-between;
+}
+.contain .bar .left a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgb(255, 255, 255);
+        border-radius: 8px;
+        font-size: 14px;
+        line-height: 20px;
+        color: rgb(0, 112, 205);
+        width: 315px;
+        height: 52px;
+        font-weight: 400;
+        margin: 23px 44px;
+}
+.contain .bar .right img{
+    height: 24px;
+    width: 124px;
+    margin-right: 26px;
+    margin-top: 17px;
+}
+.contain .bar .right h2{
+    font-size: 18px;
+    margin-top: 17px;
+    margin-right: 25px;
+    color: white;
+}
+/* end shamel bar*/
+/*start the best doctors*/
+.contain .doctors{
+    background-color: white;
+    padding: 16px 14px;
+    border-radius: 8px;
+    height: 584.4px;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+}
+.contain .doctors .text{
+    padding: 37px 18px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.contain .doctors .text .right h2{
+    color: #666666;
+    font-size: 24px;
+    font-weight: bold;
+}
+.contain .doctors .text .left a{
+    font-weight: bold;
+    text-decoration: none;
+}
+.contain .doctors .scroll-container{
+    display: flex;
+    overflow-x: auto;   /* يخليها تتحرك أفقياً */
+    white-space: nowrap; /* يخلي العناصر جنب بعض */
+    gap: 10px;          /* مسافة بين العناصر */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    scrollbar-width: thin; /* شكل الاسكرول في فايرفوكس */
+}
+.contain .doctors .scroll-container span .specialty{
+    display: inline-block;
+    padding: 8px 15px;
+    background: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    flex-shrink: 0; /* يمنع العنصر من التصغير */
+    white-space: nowrap;
+
+}
+.contain .doctors .scroll-container span{
+    padding: 8px;
+    background-color: #f1f4f6;
+    width: 217px;
+    height: 40px;
+    border-radius: 10px;
+}
+.specialty:hover {
+    background: #e0e0e0;
+}
+/*end the best doctors*/
+/* start for centers */
+.center{
+
+}
+.centers .contain{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    height:352px;
+    margin-top: 20px;
+    padding: 42px 18px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.centers .contain .right h2{
+    color: #666666;
+    font-size: 24px;
+    font-weight: bold;
+}  
+.centers .contain .left a{
+    font-weight: bold;
+    text-decoration: none;
+}
+/* end for centers */
+
+/*end css home page*/
