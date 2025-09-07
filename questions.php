@@ -49,73 +49,73 @@
         </div>
           <div class="part w-80">
             <button class="w-100 main_text button_color border mt-3 mb-1"  onclick="toggle(this)" data-target="demo7">ايه اعراض نقص فيتامين د؟</button>        
-        <p class="main_text mb-3" id="demo7" style="display:none;">تشمل أعراض نقص فيتامين د <BR>
+        <p class="main_text mb-3" id="demo7" style="display:none;"><ul>تشمل أعراض نقص فيتامين د 
  
-الإحساس بالتعب والضعف العام<BR>
+<li>الإحساس بالتعب والضعف العام</li>
  
-الشعور بالحزن والاكتئاب<BR>
+<li>الشعور بالحزن والاكتئاب</li>
  
-الألم العضلي والعظمي<BR>
+<li>الألم العضلي والعظمي</li>
  
-زيادة عدوى الجهاز التنفسي<BR>
+<li>زيادة عدوى الجهاز التنفسي</li>
  
-تغيرات في الشعر والأظافر<BR>
+<li>تغيرات في الشعر والأظافر</li>
  
-تدهور في صحة العظام مما يزيد من خطر الإصابة بكسور<BR></p>
+<li>تدهور في صحة العظام مما يزيد من خطر الإصابة بكسور</li></ul></p>
 
         </div>
           <div class="part w-80">
             <button class="w-100 main_text button_color border mt-3 mb-1"  onclick="toggle(this)" data-target="demo8"> ايه اعراض نقص فيتامين B؟</button>
-             <p class="main_text mb-3" id="demo8" style="display:none;">من بين الأعراض الشائعة لنقص فيتامين    <BR>
+             <p class="main_text mb-3" id="demo8" style="display:none;"><ul>من بين الأعراض الشائعة لنقص فيتامين  
  
-فقدان الشهية وفقدان الوزن<BR>
+<li>فقدان الشهية وفقدان الوزن</li>
  
-الإمساك والإسهال<BR>
+<li>الإمساك والإسهال</li>
  
-التعب والضعف العام<BR>
+<li>التعب والضعف العام</li>
  
-العصبية والتوتر والقلق<BR>
+<li>العصبية والتوتر والقلق</li>
  
-الصداع والدوار والصدر المتقلص<BR>
+<li>الصداع والدوار والصدر المتقلص</li>
  
-زيادة ضربات القلب وضيق التنفس<BR>
+<li>زيادة ضربات القلب وضيق التنفس</li>
  
-تشنجات العضلات وألم الأعصاب<BR>
+<li>تشنجات العضلات وألم الأعصاب</li></ul>
  </p>        
         </div>
           <div class="part w-80">
             <button class="w-100 main_text button_color border mt-3 mb-1"  onclick="toggle(this)" data-target="demo12">ايه هى اعراض نقص الكالسيوم؟</button>        
-        <p class="main_text mb-3" id="demo12" style="display:none;">أعراض نقص الكالسيوم تشمل<BR>  
+        <p class="main_text mb-3" id="demo12" style="display:none;"><ul>أعراض نقص الكالسيوم تشمل  
  
-آلام العظام والعضلات والمفاصل<BR>
+<li>آلام العظام والعضلات والمفاصل</li>
  
-الكسور العظمية<BR>
+<li>الكسور العظمية</li>
  
-تشنجات العضلات<BR>
+<li>تشنجات العضلات</li>
  
-خدران أو وخز في الأطراف<BR>
+<li>خدران أو وخز في الأطراف</li>
  
-اضطرابات في النوم<BR>
+<li>اضطرابات في النوم</li>
  
-القلق والاكتئاب<BR>
+<li>القلق والاكتئاب</li>
  
-تساقط الشعر<BR>
+<li>تساقط الشعر</li>
  
-ضعف الأسنان<BR></p>
+<li>ضعف الأسنان</li></ul></p>
         </div>
          <div class="part w-80">
             <button class="w-100 main_text button_color border mt-3 mb-1"  onclick="toggle(this)" data-target="dem9">ايه اعراض النزلة المعوية؟</button>        
-        <p class="main_text mb-3" id="dem9" style="display:none;">:أعراض النزلة المعوية تشمل <BR>
+        <p class="main_text mb-3" id="dem9" style="display:none;"><ul>:أعراض النزلة المعوية تشمل
  
-الإسهال<BR>
+<li>الإسهال</li>
  
-الغثيان والقيء<BR>
+<li>الغثيان والقيء</li>
  
-الآلام في البطن<BR>
+<li>الآلام في البطن</li>
  
-الحمى في بعض الأحيان<BR>
+<li>الحمى في بعض الأحيان</li>
  
-التعب والصداع وألم في العضلات<BR></p>
+<li>التعب والصداع وألم في العضلات</li><ul></p>
         </div>
          <div class="part w-80">
             <button class="w-100 main_text  border mt-3 mb-1 button_color"  onclick="toggle(this)" data-target="demo10">ايه هو تحليل السكر التراكمي؟</button>        
@@ -142,6 +142,7 @@ function toggle(button) {
 <script >src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"</script>
     
 </body>
+
 
 
 
