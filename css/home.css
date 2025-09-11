@@ -133,7 +133,7 @@ select, input {
     background-color: white;
     padding: 16px 14px;
     border-radius: 8px;
-    height: 584.4px;
+    height: 727px;
     box-sizing: border-box;
     width: 100%;
     overflow: hidden;
@@ -156,13 +156,12 @@ select, input {
 }
 .contain .doctors .scroll-container{
     display: flex;
-    overflow-x: auto;   /* يخليها تتحرك أفقياً */
+    overflow-y: hidden;   /* يخليها تتحرك أفقياً */
     white-space: nowrap; /* يخلي العناصر جنب بعض */
     gap: 10px;          /* مسافة بين العناصر */
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    scrollbar-width: thin; /* شكل الاسكرول في فايرفوكس */
 }
 .contain .doctors .scroll-container span .specialty{
     display: inline-block;
@@ -185,31 +184,352 @@ select, input {
 .specialty:hover {
     background: #e0e0e0;
 }
+.contain .doctors .up{
+    display: flex;
+    overflow-y: hidden;
+}
+.contain .doctors .up .doctor{
+    border: rgb(182, 180, 180) 0.5px solid;
+    height: 236px;
+    margin: 10px 10px;
+    border-radius: 20px;
+}
+.contain .doctors .up .doctor h6{
+    margin-right: 12px;
+}
+.contain .doctors .up .doctor h7{
+    color:gray;
+    margin-right: 12px;
+}
+.contain .doctors .up .doctor .img img{
+    width: 156px;
+    border-radius: 33px;
+    padding: 10px;
+}
+.contain .doctors .down{
+    display: flex;
+    overflow-y: hidden;
+}
+.contain .doctors .down .doctor{
+    border: rgb(182, 180, 180) 0.5px solid;
+    height: 236px;
+    margin: 10px 10px;
+    border-radius: 20px;
+}
+.contain .doctors .down .doctor h6{
+    margin-right: 12px;    
+}
+.contain .doctors .down .doctor h7{
+    margin-right: 12px;    
+    color:gray;
+}
+.contain .doctors .down .doctor .img img{
+    width: 156px;
+    border-radius: 33px;
+    padding: 10px;
+}
 /*end the best doctors*/
 /* start for centers */
-.center{
-
-}
-.centers .contain{
-    display: flex;
-    justify-content: space-between;
+.center .contain{
     background-color: white;
-    height:352px;
-    margin-top: 20px;
-    padding: 42px 18px;
+    height: 434px;
     border-radius: 8px;
     box-sizing: border-box;
     overflow: hidden;
+    margin-top:20px;
 }
-.centers .contain .right h2{
+.center .contain .text{
+    display: flex;
+    justify-content: space-between;     
+    padding: 26px 18px;  
+}
+.center .contain .text .right h2{
     color: #666666;
     font-size: 24px;
     font-weight: bold;
 }  
-.centers .contain .left a{
+.center .contain .text .left a{
     font-weight: bold;
     text-decoration: none;
 }
+.center .contain .centers{
+    display: flex;
+    justify-content: space-evenly;
+    overflow-y: hidden;
+    width: 100%;
+}
+.center .contain .centers .item{
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 11px;
+    border: 2px solid #eef0f2;
+    margin-right: 3px;
+}
+.center .contain .centers .item img{
+    width: 265px;
+    height: 149px;
+    border-radius: 31px;
+    padding: 0px 9px;
+}
+.center .contain .centers .item .details{
+    display: flex;
+    justify-content: right;
+}
+.center .contain .centers .item .details .right img{
+    border-radius: 100%;
+    height: 63px;
+    width: 63px;
+    border: solid #e3e6ea 1px;
+    margin-top: 10px;
+}
+.center .contain .centers .item .details .left{
+    margin-right: 10px;
+}
+.center .contain .centers .item .details .left h6{
+    color:black;
+}
+.center .contain .centers .item .details .left h7{
+    color:grey;
+}
 /* end for centers */
+/* start nurth */
+.nurth .contain{
+    background-color: white;
+    height: 142px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 22px;
+    border-radius: 10px;
+}
+.nurth .contain .right{
+display: flex;
+}
+.nurth .contain .right img{
+    margin-right:20px;
+}
+.nurth .contain .right .right2 .img{
+    width: 118px;
+    height: 75px;
+
+}
+.nurth .contain .right .right2 h3{
+    font-size: 25px;
+    color: #666666;
+    font-family: none;
+}
+.nurth .contain .left{
+background-color: #e6f1ff;
+    margin: 46px 72px;
+    height: 69px;
+    text-align: center;
+    width: 381px;
+    border-radius: 10px;
+    padding-top: 13px;
+}
+.nurth .contain .left a{
+    font-size: 22px;
+    color: #0a58ca;
+    text-decoration: none;
+}
+/* end nurth */
+/*start ask-box*/
+.askbox .contain{
+    background: #fff;
+    margin-top: 20px;
+    border-radius: 12px;
+    padding: 20px 48px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    color: #666666;
+}
+.askbox .contain button{
+    background-color: #e5f1ff;
+    border: none;
+    width: 157px;
+    height: 54px;
+    border-radius: 10px;
+    color: #0a58ca;
+    font-size: 22px;
+}
+/*end ask-box*/
+/*start pharmacybox*/
+.card-box {
+  border-radius: 12px;
+  padding: 20px 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.pharmacybox {
+  color: #fff;
+}
+.pharmacybox .contain{
+    background-color: #3178c3;
+    align-items: center;
+    height: 209px;
+    border-radius: 10px;
+        padding-right: 51px;
+    padding-top: 40px;
+}
+
+.pharmacybox .text {
+  flex: 1;
+}
+.pharmacybox button {
+  background: #fff;
+  color: #0d6efd;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+/*end pharmacybox*/
+/* start two boxes*/
+.twoboxes {
+    background-color: #eef0f2;
+    padding-bottom: 38px;
+}
+.twoboxes .contain{
+    display: flex;
+    justify-content: space-between;
+    height: 190px;
+}
+.twoboxes .contain .right{
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 10px;
+    width: 49%;
+}
+.twoboxes .contain .left{
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 10px;
+    width: 49%;    
+}
+.twoboxes .text {
+    margin-top: 39px;
+    color: #666666;
+    font-size: 21px;
+}
+.twoboxes  a {
+    text-decoration: none;
+}
+/* end two boxes*/
+/* start end-part */
+.details .contain{
+    display: flex;
+    justify-content: space-around;
+}
+.details .contain .detail {
+    padding-top: 57px;
+}
+.details .contain .detail h2{
+    color:#666666;
+    font-size: 27px;
+}
+.details .contain .detail h5{
+    color:#666666;
+    font-size: 16px;
+}
+.details .contain .detail i{
+    background-color: #3178c3;
+    width: 50px;
+    height: 50px;
+}
+/*start download */
+.download {
+    margin-bottom: 52px;
+}
+.download .contain{
+    background-color: #0070cd;
+    border-radius: 10px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+.download .contain .left img {
+    width: 499px;
+    height: 391px;
+    padding-top: 47px;
+    padding-left: 148px;
+}
+.download .contain .right h2{
+    color:white;
+    margin-top: 101px;
+    margin-right: 143px;
+}
+.download .contain .right h5{
+    color:white;
+    margin-top: 27px;
+    margin-right: 141px;
+}
+.download .contain .right .link {
+    margin-right: 141px;
+    margin-top: 50px;
+}
+.download .contain .right .link a {
+    color: grey;
+    text-decoration: none;
+    background-color: white;
+    padding: 11px;
+    border-radius: 10px;
+}
+
+/*end download */
+/* start choose */
+
+.choose{
+background-color: #eef0f2;
+    height: 249px;
+}
+.choose .contain{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 63px;
+}
+.choose .contain .right h3{
+    color:grey;
+}
+.choose .contain .right .doctors{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #eef0f2;
+    height: 109px;
+    margin: 0px -27px;
+}
+.choose .contain .right .doctors a{
+    text-decoration: none;
+    background-color: white;
+    margin-right: 13px;
+    margin-bottom: 11px;
+    padding: 8px;
+    border-radius: 10px;
+    color: grey;
+}
+.choose .contain .left h3{
+    color:gray;
+}
+.choose .contain .left .cities{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #eef0f2;
+    height: 109px;
+    margin: 0px -14px;
+}
+.choose .contain .left .cities a{
+    text-decoration: none;
+    background-color: white;
+    margin-right: 13px;
+    margin-bottom: 11px;
+    padding: 8px;
+    border-radius: 10px;
+    color: grey;
+}
+
+/* end choose */
+
+/* end end-part */
 
 /*end css home page*/
+
+
