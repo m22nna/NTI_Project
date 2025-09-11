@@ -78,62 +78,255 @@ include_once("header.php");
     <!--start the best doctors-->
     <div class="contain">
         <div class="doctors">
-        <div class="text">
+            <div class="text">
+                <div class="right">
+                    <h2>الأطباء الأكثر اختيارا</h2>
+                </div>
+                <div class="left">
+                    <a href="#">أظهر المزيد</a>
+                </div>
+            </div>
+            <div class="scroll-container">
+                <?php $specialties = [
+                    "كل التخصصات",
+                    "اسنان",
+                    "جهاز هضمي ومناظير",
+                    "نساء وتوليد",
+                    "جلدية",
+                    "جراحة عامة",
+                    "عظام",
+                    "جراحة تجميل",
+                    "نفسي",
+                    "مسالك بولية",
+                    "جراحة اطفال",
+                    "جراحة اوعية دموية",
+                    "انف واذن وحنجرة",
+                    "روماتيزم",
+                    "تخسيس وتغذية",
+                    "باطنة",
+                    "علاج طبيعي واصابات ملاعب",
+                    "جراحة مخ واعصاب",
+                    "ذكورة وعقم",
+                    "كلى",
+                    "مخ واعصاب"
+                ];
+                foreach ($specialties as $value): ?>
+                    <span class="specialty"><?php echo $value ?></span>
+                <?php endforeach; ?>
+            </div>
+            <div class="up">
+               <div class="doctor">
+                <div class="img">
+                <img src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT84dde9/Profile/150/doctor-khaled-ahmed-dentistry_20250716171349563.jpg"/>
+                </div>
+                <h6>خالد أحمد</h6>
+                <h7>أسنان</h7><br>
+                <h7>التجمع</h7>
+               </div>
+                <div class="doctor">
+               <div class="img">
+                <img src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT3ff1ea/Profile/150/doctor-dr-ahmed-nagi-alghandour-dentistry_20181125140949536.jpg"/>
+               </div>
+                <h6>أحمد ناجي</h6>
+                <h7>أسنان</h7><br>
+                <h7>مدينة نصر</h7>
+               </div>
+            </div>
+            <div class="down">
+               <div class="doctor">
+               <div class="img">
+                <img src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT4aa3c5/Profile/150/doctor-mohamed-el-khateb-dentistry_20250521001943810.jpg"/>
+               </div>
+                <h6>محمد الخطيب</h6>
+                <h7>أسنان</h7><br>
+                <h7>حدائق الأهرام</h7>
+               </div>
+                <div class="doctor">
+               <div class="img">
+                <img src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT4961a6/Profile/150/doctor-ahmed-nabil-fahmi-dentistry_20181218115353071.jpg"/>
+               </div>
+                <h6>أحمد نبيل</h6>
+                <h7>أسنان</h7><br>
+                <h7>الدقي</h7>
+               </div>
+            </div>
+            </div>
+        </div>
+
+
+    <!--end the best doctors-->
+
+    <!-- start for centers -->
+    <div class="center">
+        <div class="contain">
+            <div class="text">
+                <div class="right">
+                    <h2>المراكز الأكثر اختيارا</h2>
+                    </h2>
+                </div>
+                <div class="left">
+                    <a href="#">أظهر المزيد</a>
+                </div>
+            </div>
+            <div class="centers">
+                <?php $conn = mysqli_connect("localhost", "root", "", "vezeeta");
+                $query = "SELECT * FROM centers";
+                $result = mysqli_query($conn, $query);
+                while ($row = mysqli_fetch_assoc($result)): ?>
+                    <div class="item">
+                        <img src="<?php echo $row['image'] ?>" />
+                        <div class="details">
+                            <div class="right">
+                                <img src="<?php echo $row['logo'] ?>" />
+                            </div>
+                            <div class="left">
+                                <h6><?php echo $row['center'] ?></h6>
+                                <h7><?php echo $row['number'] ?></h7>
+                                <h7><?php echo $row['location'] ?></h7>
+                            </div>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+            </div>
+        </div>
+    </div>
+
+    <!-- end for centers -->
+    <!-- start nurth -->
+    <div class="nurth">
+        <div class="contain">
             <div class="right">
-                <h2>الأطباء الأكثر اختيارا</h2>
+                <img src="photos/noprofile.jpg" />
+                <div class="right2">
+                    <img class="img" src="https://cdn-react.vezeeta.com/vezeeta-web-reactjs/jenkins-35/images/mental-health-logo.svg"><br>
+                    <h3>عيشها براحة مع نورث.</h3>
+                </div>
             </div>
             <div class="left">
-                <a href="#">أظهر المزيد</a>
+                <a href="#">اكتشف نورث</a>
             </div>
         </div>
-        <div class="scroll-container" id="scroll">
-            <?php $specialties = [
-                "كل التخصصات","اسنان","جهاز هضمي ومناظير","نساء وتوليد","جلدية","جراحة عامة",
-                "عظام","جراحة تجميل","نفسي","مسالك بولية","جراحة اطفال","جراحة اوعية دموية",
-                "انف واذن وحنجرة","روماتيزم","تخسيس وتغذية","باطنة","علاج طبيعي واصابات ملاعب",
-                "جراحة مخ واعصاب","ذكورة وعقم","كلى","مخ واعصاب"                  
-            ];
-            foreach($specialties as $value): ?>
-            <span class="specialty"><?php echo $value ?></span>
-            <?php endforeach; ?>
-        </div>
-        </div>
     </div>
 
-<!--end the best doctors-->
+    <!-- end nurth -->
+    <!-- start ask-box -->
+    <div class="askbox">
+        <div class="contain">
+            <h3>لديك سؤال طبي؟</h3>
+            <p>ارسل سؤالك الطبي واحصل على اجابة من دكتور متخصص</p>
+            <button>اسأل الآن</button>
+        </div>
+    </div>
+    <!-- end ask-box -->
+    <!-- start pharmacy-box -->
 
-<!-- start for centers -->
-<div class="centers">
+    <div class="card-box pharmacybox">
+        <div class="contain">
+            <div class="text">
+                <h3>صيدلية</h3>
+                <p>اطلب ادويتك وكل اللي تحتاجه من الصيدلية.</p>
+                <button>اطلب الآن</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end pharmacy-box -->
+<!-- start two boxes -->
+<div class="twoboxes">
     <div class="contain">
         <div class="right">
-         <h2>المراكز الأكثر اختيارا</h2>
-         </h2>
+            <img src="https://cdn-react.vezeeta.com/vezeeta-web-reactjs/jenkins-37/images/telehealth-solution-card/desktop.webp" />
+            <div class="text">
+                <h2>مكالمة دكتور</h2>
+                <h5>للمتابعة عبر مكالمة صوتية أو فيديو</h5>
+                <a href="">احجز الآن</a>
+            </div>
         </div>
         <div class="left">
-         <a href="#">أظهر المزيد</a>
+            <img src="https://cdn-react.vezeeta.com/vezeeta-web-reactjs/jenkins-37/images/homevisits-solution-card/eg/desktop.webp" />
+            <div class="text">
+                <h2>زيارة منزلية</h2>
+                <h5>اختار التخصص أو الدكتور هيجيلك البيت</h5>
+                <a href="">احجز زيارة</a>
+            </div>
         </div>
     </div>
 </div>
+<!-- end two boxes -->
+<!-- start end-part -->
+<div class="details">
+    <div class="contain">
+        <div class="detail">
+            <i class="fa-solid fa-hands-holding-circle"></i>
+            <h2>كل احتياجاتك على فيزيتا</h2>
+            <h5>ابحث و احجز كشف مع دكتور في عيادة، مستشفى، زيارة منزلية، 
+            أو عبر مكالمة. ممكن كمان تطلب أدوية، أو تحجز خدمة أو عملية بأحسن سعر.</h5>
+        </div>
+        <div class="detail">
+             <i class="fa-solid fa-user-doctor"></i>
+             <h2>تقييمات حقيقية من المرضى</h2>
+             <h5>تقييمات الدكاترة من مرضى حجزوا على فيزيتا و زاروا الدكتور بالفعل.</h5>
+        </div>
+        <div class="detail">
+            <i class="fa-solid fa-calendar-check"></i>
+             <h2>حجزك مؤكد مع الدكتور</h2>
+             <h5>حجزك مؤكد بمجرد اختيارك من المواعيد المتاحة للدكتور.</h5>
+        </div>
+        <div class="detail">
+            <i class="fa-solid fa-shield"></i>
+             <h2>احجز مجاناً، و ادفع في العيادة</h2>
+             <h5>سعر الكشف على فيزيتا نفس سعر الكشف في العيادة، بدون أي مصاريف إضافية.</h5>
+        </div>
+    </div>
 </div>
-<!-- end for centers -->
 
-<script>
-    function showTab(tabId, btn) {
-        // اخفاء كل المحتويات
-        document.querySelectorAll('.tab-content').forEach(c => c.style.display = 'none');
-
-        // اظهار التاب المطلوب
-        document.getElementById(tabId).style.display = 'block';
-
-        // ازالة active من كل الازرار
-        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-
-        // اضافة active للزرار اللي اتضغط
-        btn.classList.add('active');
-    }
-</script>
-
-
+<div class="download">
+    <div class="contain">
+        <div class="right">
+          <h2>حمّل تطبيق فيزيتا</h2>
+          <h5>ابحث ، قارن واحجز استشارات طبية بسهولة مع اكبر شبكة دكاترة فى مصر اطلب
+             أدويتك وهتوصلك خلال 60 دقيقة تتبع خطواتك اليومية واكسب النقاط عند تحقيق الهدف اليومي.</h5>
+           <div class="link">                     
+            <a href="#">App Galary</a>
+             <a href="#"><i class="fa-brands fa-apple"></i>App Store</a>
+             <a href="#"><i class="fa-brands fa-google-play"></i>Google Play</a>
+           </div>
+        </div>
+        <div class="left">
+            <img src="https://cdn-react.vezeeta.com/vezeeta-web-reactjs/jenkins-37/images/dowanloadApp-eg-ar.webp"/>
+        </div>
+    </div>
+</div>
+<div class="choose">
+    <div class="contain">
+        <div class="right">
+           <h3>اختار التخصص واحجز كشف دكتور</h3>
+           <div class="doctors">
+            <?php 
+            $doctors=["جلدية","أسنان","نفسي","أطفال وحديثي الولادة","مخ وأعصاب","عظام","نساء وتوليد","أنف وأذن وحنجرة","قلب"];
+            foreach($doctors as $doctor){
+            echo "<a href='#'>$doctor</a>";
+            }
+            echo "<a href='#'>عرض المزيد ...</a>";
+            ?>
+           </div>
+        </div>
+        <div class="left">
+            <h3>اختار المحافظة واحجز كشف دكتور</h3>
+            <div class="cities">
+            <?php
+            $cities=["القاهرة","الجيزة","الاسكندرية","الساحل الشمالي","القليوبية","الغربية","المنوفية","الفيوم","الدقهلية"];
+             foreach($cities as $city){
+            echo "<a href='#'>$city</a>";
+            }
+            echo "<a href='#'>عرض المزيد ...</a>";
+            ?>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+<!-- end end-part -->
 
 <?php
 
