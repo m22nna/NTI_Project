@@ -83,7 +83,7 @@ include_once("header.php");
                     <h2>الأطباء الأكثر اختيارا</h2>
                 </div>
                 <div class="left">
-                    <a href="doctors.php">أظهر المزيد</a>
+                    <a href="#">أظهر المزيد</a>
                 </div>
             </div>
             <div class="scroll-container">
@@ -114,41 +114,44 @@ include_once("header.php");
                     <span class="specialty"><?php echo $value ?></span>
                 <?php endforeach; ?>
             </div>
+            <!-- db-->
+             <?php
+              $conn = mysqli_connect("localhost", "root", "", "vezeeta");
+              $query = "SELECT * FROM doctors1";
+              $result = mysqli_query($conn, $query);
+             ?>
+            <!-- db-->
+
             <div class="up">
+               <?php while ($row = mysqli_fetch_assoc($result)): ?>
                <div class="doctor">
                 <div class="img">
-                <img src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT84dde9/Profile/150/doctor-khaled-ahmed-dentistry_20250716171349563.jpg"/>
+                <img src="<?php echo $row['img'];?>"/>
                 </div>
-                <h6>خالد أحمد</h6>
-                <h7>أسنان</h7><br>
-                <h7>التجمع</h7>
+                <h6><?php echo $row['name'];?></h6>
+                <h7><?php echo $row['Specialization'];?></h7><br>
+                <h7><?php echo $row['location'];?></h7>
                </div>
-                <div class="doctor">
-               <div class="img">
-                <img src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT3ff1ea/Profile/150/doctor-dr-ahmed-nagi-alghandour-dentistry_20181125140949536.jpg"/>
-               </div>
-                <h6>أحمد ناجي</h6>
-                <h7>أسنان</h7><br>
-                <h7>مدينة نصر</h7>
-               </div>
+               <?php endwhile ; ?>
             </div>
+             <!-- db-->
+             <?php
+              $conn = mysqli_connect("localhost", "root", "", "vezeeta");
+              $query = "SELECT * FROM doctors2";
+              $result = mysqli_query($conn, $query);
+             ?>
+            <!-- db-->
             <div class="down">
+               <?php while ($row = mysqli_fetch_assoc($result)): ?>
                <div class="doctor">
-               <div class="img">
-                <img src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT4aa3c5/Profile/150/doctor-mohamed-el-khateb-dentistry_20250521001943810.jpg"/>
+                <div class="img">
+                <img src="<?php echo $row['img'];?>"/>
+                </div>
+                <h6><?php echo $row['name'];?></h6>
+                <h7><?php echo $row['Specialization'];?></h7><br>
+                <h7><?php echo $row['location'];?></h7>
                </div>
-                <h6>محمد الخطيب</h6>
-                <h7>أسنان</h7><br>
-                <h7>حدائق الأهرام</h7>
-               </div>
-                <div class="doctor">
-               <div class="img">
-                <img src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT4961a6/Profile/150/doctor-ahmed-nabil-fahmi-dentistry_20181218115353071.jpg"/>
-               </div>
-                <h6>أحمد نبيل</h6>
-                <h7>أسنان</h7><br>
-                <h7>الدقي</h7>
-               </div>
+               <?php endwhile ; ?>
             </div>
             </div>
         </div>
@@ -327,7 +330,27 @@ include_once("header.php");
 </div>
     </div>
 <!-- end end-part -->
+<script>
+function showTab(tabName, elmnt) {
+  // اخفاء كل التابات
+  var tabcontent = document.getElementsByClassName("tab-content");
+  for (var i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
 
+  // إزالة الـ active من كل الأزرار
+  var tablinks = document.getElementsByClassName("tab");
+  for (var i = 0; i < tablinks.length; i++) {
+    tablinks[i].classList.remove("active");
+  }
+
+  // إظهار التاب المطلوب
+  document.getElementById(tabName).style.display = "block";
+
+  // إضافة كلاس active للزر المضغوط
+  elmnt.classList.add("active");
+}
+</script>
 <?php
 
 include_once("footer.php");
