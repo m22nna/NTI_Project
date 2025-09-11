@@ -83,7 +83,7 @@ include_once("header.php");
                     <h2>الأطباء الأكثر اختيارا</h2>
                 </div>
                 <div class="left">
-                    <a href="#">أظهر المزيد</a>
+                    <a href="doctors.php">أظهر المزيد</a>
                 </div>
             </div>
             <div class="scroll-container">
@@ -332,3 +332,4 @@ include_once("header.php");
 
 include_once("footer.php");
 ?>
+
