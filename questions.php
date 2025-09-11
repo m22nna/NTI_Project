@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,7 +50,7 @@
         </div>
           <div class="part w-80">
             <button class="w-100 main_text button_color border mt-3 mb-1"  onclick="toggle(this)" data-target="demo7">ايه اعراض نقص فيتامين د؟</button>        
-        <p class="main_text mb-3" id="demo7" style="display:none;"><ul>تشمل أعراض نقص فيتامين د 
+        <ul class="main_text mb-3 my-list" id="demo7" style="display:none;">تشمل أعراض نقص فيتامين د 
  
 <li>الإحساس بالتعب والضعف العام</li>
  
@@ -61,12 +62,12 @@
  
 <li>تغيرات في الشعر والأظافر</li>
  
-<li>تدهور في صحة العظام مما يزيد من خطر الإصابة بكسور</li></ul></p>
+<li>تدهور في صحة العظام مما يزيد من خطر الإصابة بكسور</li></ul>
 
         </div>
           <div class="part w-80">
             <button class="w-100 main_text button_color border mt-3 mb-1"  onclick="toggle(this)" data-target="demo8"> ايه اعراض نقص فيتامين B؟</button>
-             <p class="main_text mb-3" id="demo8" style="display:none;"><ul>من بين الأعراض الشائعة لنقص فيتامين  
+             <ul class="main_text mb-3 my-list" id="demo8" style="display:none;">من بين الأعراض الشائعة لنقص فيتامين  
  
 <li>فقدان الشهية وفقدان الوزن</li>
  
@@ -81,11 +82,11 @@
 <li>زيادة ضربات القلب وضيق التنفس</li>
  
 <li>تشنجات العضلات وألم الأعصاب</li></ul>
- </p>        
+        
         </div>
           <div class="part w-80">
             <button class="w-100 main_text button_color border mt-3 mb-1"  onclick="toggle(this)" data-target="demo12">ايه هى اعراض نقص الكالسيوم؟</button>        
-        <p class="main_text mb-3" id="demo12" style="display:none;"><ul>أعراض نقص الكالسيوم تشمل  
+        <ul class="main_text mb-3 my-list" id="demo12" style="display:none;">أعراض نقص الكالسيوم تشمل  
  
 <li>آلام العظام والعضلات والمفاصل</li>
  
@@ -101,11 +102,11 @@
  
 <li>تساقط الشعر</li>
  
-<li>ضعف الأسنان</li></ul></p>
+<li>ضعف الأسنان</li></ul>
         </div>
          <div class="part w-80">
             <button class="w-100 main_text button_color border mt-3 mb-1"  onclick="toggle(this)" data-target="dem9">ايه اعراض النزلة المعوية؟</button>        
-        <p class="main_text mb-3" id="dem9" style="display:none;"><ul>:أعراض النزلة المعوية تشمل
+        <ul class="main_text mb-3 my-list" style=display:none id="dem9" >أعراض النزلة المعوية تشمل
  
 <li>الإسهال</li>
  
@@ -115,7 +116,9 @@
  
 <li>الحمى في بعض الأحيان</li>
  
-<li>التعب والصداع وألم في العضلات</li><ul></p>
+<li>التعب والصداع وألم في العضلات</li>
+
+</ul>
         </div>
          <div class="part w-80">
             <button class="w-100 main_text  border mt-3 mb-1 button_color"  onclick="toggle(this)" data-target="demo10">ايه هو تحليل السكر التراكمي؟</button>        
@@ -142,6 +145,8 @@ function toggle(button) {
 <script >src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"</script>
     
 </body>
+
+
 
 
 
