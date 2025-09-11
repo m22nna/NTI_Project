@@ -28,3 +28,13 @@
     width:90%;
     margin: auto;
 }
+.my-list {
+  direction: rtl;
+  text-align: right;
+  list-style-position: inside;
+}
+
+.my-list li {
+  list-style-type: disc; /* شكل النقاط */
+}
+
