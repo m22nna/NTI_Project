@@ -83,7 +83,7 @@ include_once("header.php");
                     <h2>الأطباء الأكثر اختيارا</h2>
                 </div>
                 <div class="left">
-                    <a href="#">أظهر المزيد</a>
+                    <a href="doctors.php">أظهر المزيد</a>
                 </div>
             </div>
             <div class="scroll-container">
@@ -116,9 +116,10 @@ include_once("header.php");
             </div>
             <!-- db-->
              <?php
-              $conn = mysqli_connect("localhost", "root", "", "vezeeta");
+              include'configration.php';
+              $connection = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
               $query = "SELECT * FROM doctors1";
-              $result = mysqli_query($conn, $query);
+              $result = mysqli_query($connection, $query);
              ?>
             <!-- db-->
 
@@ -132,13 +133,15 @@ include_once("header.php");
                 <h7><?php echo $row['Specialization'];?></h7><br>
                 <h7><?php echo $row['location'];?></h7>
                </div>
-               <?php endwhile ; ?>
+               <?php endwhile ; 
+               mysqli_close($connection);
+               ?>
             </div>
              <!-- db-->
              <?php
-              $conn = mysqli_connect("localhost", "root", "", "vezeeta");
+              $connection = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
               $query = "SELECT * FROM doctors2";
-              $result = mysqli_query($conn, $query);
+              $result = mysqli_query($connection, $query);
              ?>
             <!-- db-->
             <div class="down">
@@ -151,7 +154,9 @@ include_once("header.php");
                 <h7><?php echo $row['Specialization'];?></h7><br>
                 <h7><?php echo $row['location'];?></h7>
                </div>
-               <?php endwhile ; ?>
+               <?php endwhile ; 
+               mysqli_close($connection);
+               ?>
             </div>
             </div>
         </div>
@@ -172,9 +177,10 @@ include_once("header.php");
                 </div>
             </div>
             <div class="centers">
-                <?php $conn = mysqli_connect("localhost", "root", "", "vezeeta");
+                <?php 
+                $connection = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
                 $query = "SELECT * FROM centers";
-                $result = mysqli_query($conn, $query);
+                $result = mysqli_query($connection, $query);
                 while ($row = mysqli_fetch_assoc($result)): ?>
                     <div class="item">
                         <img src="<?php echo $row['image'] ?>" />
@@ -189,7 +195,9 @@ include_once("header.php");
                             </div>
                         </div>
                     </div>
-                <?php endwhile; ?>
+                <?php endwhile; 
+                mysqli_close($connection);
+                ?>
             </div>
         </div>
     </div>
