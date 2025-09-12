@@ -1,0 +1,194 @@
+
+    body {
+      font-family: 'Tahoma', sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      display: flex;
+      gap: 20px;
+      /*width: 65%;*/
+      position: relative;
+    }
+
+    /* العمود الرئيسي */
+    .main-content {
+      flex: 3;
+      width: 60%;
+      margin: auto;
+    }
+
+    /* العمود الجانبي */
+    .sidebar {
+      flex: 1;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 0;
+      height: 100%;
+      position: sticky;
+      /*top: 0px;*/
+      top: 150px;
+      left: 0;
+      width: 40%;
+    }
+
+    .sidebar h3 {
+      background: #0d6efd;
+      color: #fff;
+      padding: 12px;
+      border-radius: 12px 12px 0 0;
+      margin: 0;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .filter-group {
+      border-bottom: 1px solid #eee;
+    }
+
+    .filter-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 15px;
+      padding: 12px 15px;
+      color: #333;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .filter-title span.icon {
+      margin-left: 6px;
+    }
+
+    .filter-title .arrow {
+      transition: transform 0.3s;
+    }
+
+    .filter-title.active .arrow {
+      transform: rotate(90deg);
+    }
+
+    .filter-content {
+      display: none;
+      padding: 0 15px 10px 15px;
+    }
+
+    .filter-content label {
+      display: block;
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 6px;
+      cursor: pointer;
+    }
+
+    .filter-content input {
+      margin-left: 6px;
+    }
+
+    /* كارت الدكتور */
+    .doctor-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      width: 70%;
+      margin: auto;
+    }
+
+    .doctor-card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-left: 20px;
+      border: 3px solid #eee;
+    }
+
+    .doctor-info {
+      flex: 1;
+    }
+
+    .doctor-info h2 {
+      margin: 0;
+      font-size: 20px;
+      color: #333;
+    }
+
+    .doctor-info p {
+      margin: 5px 0;
+      color: #555;
+    }
+
+    .rating {
+      color: #FFD700;
+      font-size: 18px;
+    }
+
+    .tags {
+      margin: 10px 0;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .details {
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #0d6efd;
+      margin-top: 8px;
+    }
+
+    /* جدول المواعيد */
+    .schedule {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .schedule .day {
+      flex: 1;
+      background: #e9f2ff;
+      padding: 10px;
+      text-align: center;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .day h4 {
+      margin: 5px 0;
+      color: #0d6efd;
+    }
+
+    .reserve-btn {
+      background: #dc3545;
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 14px;
+    }
+
+    .reserve-btn:hover {
+      background: #b52a37;
+    }
+    .doctor-page{
+      display: flex;
+      position: relative;
+     
+    }
