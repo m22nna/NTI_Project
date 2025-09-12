@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -9,11 +12,14 @@
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="icon" href="https://cdn-react.vezeeta.com/vezeeta-web-reactjs/jenkins-34/images/favicon-32x32.png" type="image/png" sizes="32x32">
     <link rel="stylesheet" href="css/mine.css"/>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/doctors.css" />
+    <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg" style="background-color:#007bdb;">
+<nav class="navbar navbar-expand-lg" style="background-color:rgb(0, 112, 205)">
   <div class="container">
 
 
@@ -25,11 +31,11 @@
 
     <!-- Menu (right) -->
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto align-items-center">
+      <ul class="navbar-nav ms-auto align-items-center" st>
 
         <!-- Country (flag + text) -->
-<!-- Country Dropdown -->
- <li class="nav-item dropdown me-3">
+        <!-- Country Dropdown -->
+        <li class="nav-item dropdown me-3">
           <a class="nav-link dropdown-toggle d-flex align-items-center text-white" href="#" id="countryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <img src="https://flagcdn.com/w20/eg.png" alt="مصر" class="me-1">
             <span>مصر</span>
@@ -44,23 +50,31 @@
 
 
         <!-- Links -->
-        <li class="nav-item"><a class="nav-link text-white" href="#">English</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="#">اتصل بنا</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="#">فيزيتا للأطباء</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="#">دخول</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#" style="border-right : 1px solid white;">English</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#" style="border-right : 1px solid white;">اتصل بنا</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#" style="border-right : 1px solid white;">فيزيتا للأطباء</a></li>
+        <?php 
+        if (isset($_SESSION['patient'])): 
+        ?>
+        <li class="nav-item"><a class="nav-link text-white" href="logout.php" style="border-right : 1px solid white;">تسجيل خروج</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="bookings_dashboard.php" style="border-right : 1px solid white;">اداره الحجز</a></li>
+        <?php else: ?>  
+        <li class="nav-item"><a class="nav-link text-white" href="patientLogin.php" style="border-right : 1px solid white;">دخول</a></li>
 
         <!-- Button -->
         <li class="nav-item">
-          <a class="btn btn-outline-light ms-2" href="#">انضم الآن</a>
+          <a class="btn btn-outline-light ms-2" href="patientSignup.php">انضم الآن</a>
         </li>
+        <?php endif; ?>
 
       </ul>
     </div>
         <!-- Logo (left) -->
-    <a class="navbar-brand fw-bold" href="#" style="color:white; font-size: 1.5rem;">
-      Vezeeta<span style="color:red;">.com</span>
-    </a>
+        <img src="https://cdn-react.vezeeta.com/vezeeta-web-reactjs/jenkins-37/images/whitelogowithdotcom.png" alt="" style="width: 110px;">
   </div>
-</nav>
+  </nav>
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
 
 
